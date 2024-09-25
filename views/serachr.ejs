@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>serache</title>
+    <link rel="stylesheet" href="/ss.css">
+</head>
+<body>
+    
+    
+    <table style="width: 60%; padding: 50px; margin-top: 5%;">
+       
+        <tr style="background-color: aqua;">
+        <th> Id </th>
+        <th> Nom </th> 
+        <th> Prenom </th>
+        <th> Age </th>
+        <th>Emaile </th>
+        <th> telephone </th>
+        <th>Message </th>
+        <th> Time</th>
+        
+        </tr>
+       
+        <tbody id="tbod">  
+            <% arr.forEach( (item,index ) => { %>
+                <tr>
+                    <td> <%= index+1 %> </td>
+                    <td> <%= item.firstname %> </td>
+                    <td> <%= item.lastname %> </td>
+                    <td> <%= item.email %> </td>
+                    <td><%= item.agee %> </td>
+                    <td> <%= item.phone %> </td>
+                    <td><%= item.messagen %> </td>
+                    <td> <%=moment(item.updatedAt).fromNow() %></td>
+                     </tr>
+            <% }); %>
+        
+
+            
+           </tbody>
+    </table>
+</div>
+</div>
+
+
+    
+</body>
+</html>

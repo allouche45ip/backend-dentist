@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les clients</title>
+    <link rel="stylesheet" href="/style.css">
+</head> 
+<body>
+    
+   
+
+    <section class="contact" id="reserve">
+        <div class="heading">
+            <h2> UPDATE   </h2>
+        </div>
+      
+        <div class="container">
+            <div class="image">
+                <img src="/myimage/About.jpg" alt="">
+            </div>
+               <form class="moh" action="/upd/<%= obj._id %>?_method=PUT" method="post">
+    
+                <h1></h1>
+                <input name="firstname" type="text" value="<%= obj.firstname %> " required id="nom" >
+                <input name="lastname" type="text" value="<%= obj.lastname %>" required id="prenom">
+                <input name="email" type="email" value="<%= obj.email %>" required id="Email">
+                <input name="agee"   type="number" value="<%=obj.agee %>" required id="age">
+                <input name="phone" type="number" value="<%= obj.phone %>" required  id="numerote">
+                <textarea name="messagen" value="<%=obj.messagen %>" id="message" cols="30" rows="10" ></textarea>
+               
+                  <input type="submit" class="submit" value="UPDATE" id="create" >  
+               <!-- <button  type="submit">
+                <a href="" id="create">
+                  RESRVIE
+                </a>
+                </button>  -->
+  
+               </form>
+               </div>
+      </section>

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les clients</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    
+   
+
+    <section class="contact" id="reserve">
+        <div class="heading">
+            <h2>RESERVER</h2>
+        </div>
+      
+        <div class="container">
+            <div class="image">
+                <img src="myimage/About.jpg" alt="">
+            </div>
+               <form class="moh" action="bb.html" method="post">
+    
+                <h1></h1>
+                <input name="firstname" type="text" placeholder="nom" required id="nom" >
+                <input name="lastname" type="text" placeholder="prenom" required id="prenom">
+                <input name="email" type="email" placeholder=" Email" required id="Email">
+                <input name="agee"   type="number" placeholder="Age" required id="age">
+                <input name="phone" type="number" placeholder= "telephone" required  id="numerote">
+                <textarea name="messagen" placeholder="Message" id="message" cols="30" rows="10" ></textarea>
+               
+                  <input type="submit" class="submit" value="RESRVIE" id="create" href="bb.html">  
+               <!-- <button  type="submit">
+                <a href="" id="create">
+                  RESRVIE
+                </a>
+                </button>  -->
+  
+               </form>
+               </div>
+      </section>
+
+    
+     <% if (arr.length===0) { %>
+        <h1 style="text-align: center;margin-top: 6px; color: blue;background-color: rgb(134, 197, 236);" > No Date Available</h1>
+     <% } else {  %>
+      <div class="resul">
+    
+        <div class="resulta">
+         <!--si on ecrirer dans butom -->
+           <form action="/serach" method="post">
+        <input name="searchTx" onkeyup="rechercheclient(this.value)"  type="text" placeholder="serche" id="gg"> <br><br>
+           <div class="you">
+           <button  id="search" > Serche </button>
+           <!-- <button  onclick="smod(this.id)" id="telephone" >  Serche by telephone</button> -->
+                       <!---- pour récupérer  id  pour utilise dans function-->
+           </form>
+          </div> <br>
+            <div id="deleteAll">    <!-- onclick="deletAllb()" -->
+      
+             </div>
+             
+             <table>
+                
+                 <tr>
+                 <th> Id </th>
+                 <th> Nom </th>
+                 <th> Prenom </th>
+                 <th> Age </th>
+                 <th>Emaile </th>
+                 <th> telephone </th>
+                 <th>Message </th>
+                 <th>   update </th>
+                 <th>   delete </th>
+                 <th> Time</th>
+                 <th> viws</th>
+                 </tr>
+                
+                 <tbody id="tbod">  
+                    <% arr.forEach((item,index )  => { %>
+                     <tr>
+                      <td> <%= index %> </td>
+                      <td> <%= item.firstname %>  </td>
+                      <td> <%= item.lastname %></td>
+                      <td> <%=item.agee%></td>
+                      <td> <%= item.email %></td>
+                      <td>  <%= item.phone %></td>
+                      <td> <%= item.messagen %></td>
+                     <td>  <a href="/upd/<%= item._id %>"> <button>update</button></a>  </td>
+                     <td>
+                     <form action="/delete/<%= item._id %>?_method=DELETE" method="post"> 
+                      <button type="submit">Delete</button>
+                    </form>
+                    </td>
+                     <td> <%=moment(item.updatedAt).fromNow();  %></td>
+                    <td>  <a href="/views/<%=item._id  %>"> <button> viws</button></a> </td> 
+
+
+                     </tr>
+                    <% }) %>
+                    </tbody>
+             </table>
+      </div>
+      </div>
+
+      <% } %>
+     
+    
+
+      
+  
+  <script src="nb.js"></script>
+</body>
+</html>

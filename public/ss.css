@@ -1,0 +1,47 @@
+
+
+
+body{
+
+    background-color: gainsboro;
+}
+.h1{
+    font-size: xx-large;
+    width: 10%;
+    margin: 4px;
+    border-radius: 5px ;
+   /* background-color: aquamarine ; */
+}
+.p1{
+    position: relative;
+    left: 60%;
+    color: rgb(1, 1, 1);
+
+}
+
+table{
+    width: 40%;
+    position: relative;
+    left: 10%;
+}
+.im{
+    position: relative;
+    left: 80%;
+    width: 30px;
+    padding: 10px;
+    border: 2px solid blanchedalmond;
+}
+.a1{
+    position: relative;
+    top: 50px;
+    font-size: xx-large;
+    padding: auto;
+}
+
+
+tr,td,th{
+    border: 2px solid black;
+    padding: auto;
+   
+    
+}

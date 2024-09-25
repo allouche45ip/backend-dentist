@@ -1,0 +1,968 @@
+*{
+        margin: 0;
+        padding: 0;            /* (*) sélectionne tous les éléments pour appliquer un style commun */
+        box-sizing: border-box;
+        text-decoration: none;   
+        list-style: none;
+    
+}    /* margin: 0; : Supprime les marges par défaut.
+         padding: 0; : Supprime les espacements internes par défaut.
+         box-sizing: border-box; : Inclut les bordures et le padding dans les dimensions de l'élément.
+         text-decoration: none; : Supprime les décorations de texte par défaut (utile pour les liens).
+          list-style: none; : Supprime les puces des listes.
+*/
+
+
+body{
+    width: 100%;  /* argeur à 100% de la fenêtre*/
+    height: 100%;  /*hauteur à 100% de la fenêtre*/
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+}
+
+
+
+
+/*============
+   Header
+========*/
+
+header{
+  /*margin: 1.1rem 7%;*/
+  margin: 15px;
+  
+  
+}
+
+header .head{
+  display: flex;  /*: Utilise Flexbox pour la mise en page du conteneur .head*/
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .head .logo i{
+  color: blue;
+  font-size: 2.5rem;
+}
+
+header .head .logo h1{
+  font-size: 2.2rem;
+}
+
+header .head nav{
+  /*margin-left: 20rem;*/
+  margin-top: 20px;
+}
+
+header .head nav a{
+  /*font-size: 1.2rem;*/
+  font-size: 25px;
+  margin: 0 7px;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s all ease;  /*Applique une transition de 0.3 secondes sur toutes les propriétés, avec un effet de transition fluide (ease).*/
+}
+/*ease : La transition démarre lentement, accélère au milieu, puis ralentit à la fin*/
+header .head nav a:hover{
+  border-bottom: 4px solid blue;
+  padding-bottom: 5px;
+}
+
+header .head .Appointment{
+  background-color: blue;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 7px 22px;
+  cursor: pointer;
+  transition: 0.3s all ease; 
+}
+
+header .head .Appointment:hover{
+  transform: scaleX(1.1); /*transformation d'échelle horizontale à l'élément*/
+}
+
+#menu{
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  display: none;
+    /* pour n pas veu dans mode pc */
+}
+
+
+
+/*============
+   Home
+========*/
+
+.home .page1{
+  background-image: url(myimage/dentist-2.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 44rem;
+  position: relative;
+  overflow: hidden; /*cache le contenu qui dépasse les dimensions de l'élément conteneur */
+}
+
+.home .page1 .title{
+  background-color: blue;
+  width: 45rem;
+  height: 45rem;
+  position: relative;
+  overflow: hidden;
+  transform: skew(-22deg);
+  margin-left: -11rem;
+}
+
+.home .page1 .title .content{
+  color: #fff;
+  position: absolute;
+  top: 8rem;
+  left: 15rem;
+  transform: skew(22deg);
+  width: 28rem;
+}
+
+.home .page1 .title .content h1{
+  font-size: 3.4rem;
+  margin-bottom: 14px;
+}
+
+.home .page1 .title .content h2{
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 50;
+}
+
+.home .page1 .title .content p{
+  color: #999;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  width: 26rem;
+}
+
+.home .page1 .title .content  a #places{
+  position: absolute;
+  top: 300px;
+  right: 35%;
+}
+
+.home .page1 .title .content  a #places{
+  padding: 17px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.home .page1 .title .content  a #places:hover {
+  letter-spacing: 2px;
+  background-color: rgb(221, 32, 32);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(255, 255, 255) 0px 7px 29px 0px;
+}
+.home .page1 .title .content  a #places:active {
+  letter-spacing: 3px;
+  background-color: hsl(215, 64%, 53%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.home .page1 .title .content .btn{
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 9px 15px;
+  font-size: 1.2rem;
+  transition: 0.3s all ease;
+}
+
+.home .page1 .title .content .btn:hover{
+  padding: 7px 21px;
+}
+
+
+.choisir{
+  margin: 1rem 5%;
+}
+
+.choisir .heading{
+  margin-bottom: 2rem;
+  margin-top: 3.5rem;
+  font-size: 1.8rem;
+  border-left: 7px solid blue;
+  padding-left: 7px;
+}
+
+.choisir .global{
+  display: flex;
+  margin: 0 4%;
+  padding-bottom: 2rem;
+}
+
+.choisir .global .image{
+  flex: 1 1 41rem;
+}
+
+.choisir .global .image img{
+  width: 37rem;
+  height: 23rem;
+  box-shadow: 2rem 2rem 1rem rgba(0,0,0,0.3);
+}
+
+.choisir .global .content{
+  flex: 1 1 30rem;
+}
+
+.choisir .global .content h1{
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+.choisir .global .content h2{
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.choisir .global .content p{
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 17px;
+  color: #444;
+}
+
+.choisir .global .content .p{
+  margin-bottom: 1.5rem;
+}
+
+.choisir .global .content .btn{
+  background-color: blue;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 6px 20px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  border: 3px solid blue;
+  font-weight: 600;
+}
+
+.choisir .global .content .btn:hover{
+  border: 3px solid blue;
+  background-color: #fff;
+  color: blue;
+  font-weight: 600;
+}
+
+
+.services{
+  margin: 4rem 5rem;
+}
+
+.services .page_service .box{
+  display: flex;  /* Créer un conteneur flexbox */
+  border: 4px solid blue;
+  padding: 2rem 4rem;
+  margin: 1.5rem 0;
+  border-radius: 4rem;
+  padding-bottom: 3rem;
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+.services .page_service .box .image {
+  flex: 1 1 40rem;          /*L'élément a une capacité d'extension de 1*/
+}                           /*l a une capacité de rétrécissement de 1*/
+                              /*Sa taille de base est de 40rem*/
+.services .page_service .box .image img{
+  width: 31rem;
+  height: 19rem;
+  border-radius: 2rem;
+}
+
+.services .page_service .box .content{
+  flex: 1 1 40rem;
+  margin-top: 2rem;
+}
+
+.services .page_service .box .content h1{
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+}
+
+.services .page_service .box .content h5{
+  background-color: blue;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 10px 30px;
+  width: 16.5rem;
+  border-radius: 125px;
+  margin-bottom: 1.3rem;
+}
+
+.services .page_service .box .content p{
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+  margin-bottom: 1.8rem;
+}
+
+.services .page_service .box .content .btn{
+  background-color: #fff;
+  color: blue;
+  border: 3px solid blue;
+  font-weight: 600;
+  padding: 9px 18px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+
+
+  .card1 {
+    width: fit-content; /* Définir la largeur en fonction du contenu */
+    height: fit-content; /* Définir la hauteur en fonction du contenu */
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer les éléments flexibles horizontalement */
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    position: relative;
+    top: 90px;
+    left: -59px;
+  }
+    .social{
+    width: 60px;
+    height: 52px;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Cacher le contenu débordant */
+    transition-duration: .3s;
+  }
+  
+   /*instagram*/
+  .social1:hover {
+    padding: 21px;
+    background-color: #29d6d0;
+    transition-duration: .3s;
+  }
+   /*twitter*/
+  .social2:hover {
+    padding: 21px;
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+    /*linkdin*/
+  .social3:hover {
+    padding: 21px;
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+    /*Whatsapp*/
+  .social4:hover {
+    padding: 21px;
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .social:active {
+  
+    transform: scale(0.9);
+    transition-duration: .3s; /* Durée de la transition */
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);  /* Couleur de remplissage de l'élément SVG */
+  
+  }
+  
+  .social:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+ }  /*une animation nommée slide-in-top doit être appliquée à l'élément .socialSvg lorsqu'un élément avec la classe .social est survolé.*/
+
+
+  
+#dentists{
+    
+  height: 100vh;
+  padding-top: 30px;
+  background-color: #ffffff;
+  position: relative;
+  top: 15px;
+  bottom: -20px;
+}
+
+.abt .card {
+  width: 300px;
+  height: 310px;
+  padding: 12px;
+  margin: 14px;
+  background: rgba(255, 255, 255, 0.677);
+ /* border-radius: 14px solid  blue;*/
+  backdrop-filter: blur(5px);
+  border-top: 3px solid blue;
+  border-bottom: 3px solid rgba(3, 70, 255, 0.985);
+  border-left: 2px  rgb(16, 72, 226) outset;
+  border-right:3px solid  blue;
+  box-shadow: -40px 30px 10px rgb(255, 255, 255);
+  transform: skewX(10deg);
+  transition: .4s;
+  overflow: hidden;
+  color: rgb(19, 18, 18);
+  position: relative;
+  top: 10px;
+  left: 95px;
+  margin: 50px;
+  
+}
+
+.block{
+  background-color: #d6d6d6;
+  padding: 4px;
+  margin: 12px;
+  border: 4px solid blue;
+  border-radius: 49px;
+}
+
+ .abt .card:hover {
+  height: 254px;
+  transform: skew(0deg);
+}
+
+.align {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5px; /*l y aura un espacement de 5 pixels entre chaque élément.*/
+  align-self: flex-start;
+}    /*Cette règle définit comment l'élément lui-même est aligné le long de l'axe transversal */
+
+.red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #a05554;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.yellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffbd44;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ca4e;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+}
+
+.card h1 {
+  text-align: center;
+  margin: 1.3rem;
+  color: rgb(0, 0, 0);
+  text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+}
+.abt .joo li {
+  display: inline-block;
+}*/
+
+.abt .alo .fancy {
+  position: relative;
+  left:700px;
+  top: 200px;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #801919;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none; /* Empêche la sélection du texte */
+  font-size: 12px;
+  padding-left: 250px;
+  background-color: rgb(7, 3, 3);
+  box-shadow: -10px 30px 10px rgb(255, 255, 255);
+  border-radius: 20px;
+ }
+ 
+ .fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 6px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear; /* Transition pour les propriétés background et width */
+
+ }
+ 
+ .fancy .text {
+  font-size: 2.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(255, 254, 254);
+  position: relative;
+  right:120px;
+  font-size: x-large;
+  font-weight: bolder;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*box-shadow: 35px 25px 45px rgba(53, 53, 53, 0.634);*/
+ }
+ 
+ .fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+ /* transition: width 0.5s ease-out, left 0.3s ease-out;*/
+ }
+ */
+ .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy:hover {
+  color: rgb(3, 3, 3);
+  background: rgb(255, 255, 255);
+ }
+ 
+ .fancy:hover::before {
+  width: 0.9375rem;   /*     */
+  background: rgb(3, 3, 3);
+ }
+ 
+ .fancy:hover .text {
+  color: rgb(0, 0, 0);
+  padding-left: 1.5em;
+ }
+ 
+ .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 5;
+ }
+
+
+ /**/
+
+
+
+
+ .quote{
+  margin-top: 1rem;
+}
+
+.quote .box{
+  position: relative;
+  overflow: hidden;
+}
+
+.quote .box .image img{
+  width: 100%;
+  height: 30rem;
+}
+
+.quote .box .content{
+  position: absolute;
+  top: 5rem;
+  left: 7rem;
+  width: 35rem;
+}
+
+.quote .box .content h1{
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+
+.quote .box .content h2{
+  background-color: blue;
+  color: #fff;
+  width: 19rem;
+  padding: 5px 15px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.quote .box .content p{
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.quote .box .content .p{
+  margin-bottom: 2rem;
+}
+
+.quote .box .content .btn{
+  background-color: #111;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+ 
+
+ .reserve-content{
+  height: 400vh;
+  width: 100vw;
+  background-color:#ffffff;
+  position: relative;
+  top: 25px;
+  right: 25px;
+}
+.reserve-content .container .image{
+  flex: 1 1 45rem;
+  margin-top: 3rem;
+  margin-right: 4rem;
+}
+
+.reserve-content .image img{
+  width: 37rem;
+  height: 24rem;
+  box-shadow: 2.5rem 2rem 7px rgba(0,0,0,0.3);
+}
+
+.contact{
+  margin: 3rem 5rem;
+}
+
+.contact .heading{
+  font-size: 1.9rem;
+  border-left: 7px solid blue;
+  padding-left: 8px;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.contact .container{
+  display: flex;
+  margin: 0 3%;
+}
+
+.contact .image{
+  flex: 1 1 45rem;
+  margin-top: 3rem;
+  margin-right: 2rem;
+}
+
+.contact .image img{
+  width: 37rem;
+  height: 24rem;
+  box-shadow: 2.5rem 2rem 7px rgba(0,0,0,0.3);
+}
+
+.contact .container .moh{
+  flex:  1 1 30rem;
+  border: 3px solid blue;
+  padding: 1rem 1.2rem;
+}
+
+.contact .container .moh h1{
+   text-align: center; 
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+  font-size: 2.5rem;
+  padding-left: 1.2rem;
+}
+
+.contact .container .moh input{
+  width: 30rem;
+  height: 3rem;
+  margin: 5px 0;
+  padding-left: 10px;
+   background-color: rgb(249, 249, 249); 
+  font-size: 1.1rem;
+  border: 1px solid blue;
+}
+
+.contact .container .moh textarea{
+  font-size: 1.1rem;
+  padding: 10px;
+  width: 30rem;
+  height: 10rem;
+  resize: none;
+  border: 1px solid blue;
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.contact .container .moh .submit{
+  width: 11rem;
+  font-size: 1.3rem;
+  height: 2.8rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #0000ff;
+  margin-top: 5px;
+  transition: 0.3s all;
+  margin-left: 21px;
+}
+
+.contact .container .moh .submit:hover{
+  transform: scaleX(1.1);
+}
+
+.resulta{
+  position: relative;
+  top: 260px;
+  left: 15px;
+ }
+
+
+      
+  .resulta  button{
+    width: 100%;
+    padding: 6px;
+    border: none;
+  background-color: #0000ff;
+    color: #000;
+    cursor: pointer;
+    border-radius: 20px;
+  
+}
+button:hover{
+background-color: #ff4800e3;
+letter-spacing: 1px;
+}
+      
+ .resulta.you{
+
+  display:flex;
+  justify-content: space-between;
+}
+ .resulta .you button{
+  width: 45%;
+}
+.resulta table  {
+  width:97%;
+  text-align: center;
+  margin:0px 5px;
+}
+   .resulta table th{
+text-transform: uppercase;
+padding: 5px;
+}
+
+
+#gg{
+
+  width: 99%;
+  padding: 6px;
+  border-radius: 17px;
+  background-color: #0000ff;
+  color: rgb(4, 4, 4);
+}
+#gg:hover{
+  background-color:#ff4800e3;
+  font-size: large;
+  letter-spacing: 1.5px;
+  color: #000;
+}
+
+footer{
+  margin-top: 6rem;
+}
+
+footer .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  padding-bottom: 3rem;
+}
+
+footer .container .box{
+  /* background-color: #999; */
+  width: 17rem;
+  height: 15rem;
+}
+
+footer .container .box a{
+  display: block;
+  color: #333;
+  font-weight: 500;
+  line-height: 2.2;
+  font-size: 17px;
+  transition: 0.3s all ease;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+footer .container .box a:hover{
+  text-decoration: underline blue;
+}
+
+footer .container .box .icons{
+  display: flex;
+  margin-top: 2rem;
+}
+
+footer .container .box .icons a{
+  font-size: 1.6rem;
+  margin: 0 5px;
+  background-color: blue;
+  width: 2.9rem;
+  height: 2.8rem;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  border: 2px solid blue;
+  line-height: 1.7;
+}
+
+footer .container .box .icons a:hover{
+  background-color: #fff;
+  color: blue;
+  text-decoration: none;
+}
+
+footer .container .box h2{
+  color: blue;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+footer .container .box p{
+  padding-left: 8px;
+  line-height: 1.8;
+  color: #444;
+  font-size: 18px;
+}
+
+footer .container .box .input{
+  display: block;
+}
+
+footer .container .box .input input{
+  width: 18rem;
+  margin-left: 8px;
+  margin-top: 1.2rem;
+  height: 2.7rem;
+  padding-left: 10px;
+  font-size: 1.1rem;
+  border: 2px solid blue;
+}
+
+footer .container .box .send{
+  margin-left: .5rem;
+  margin-top: 18px;
+  padding: 5px 21px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: blue;
+  border: 2px solid blue;
+  cursor: pointer;
+  transition: 0.3s all ease;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+footer .container .box .send:hover{
+  background-color: #fff;
+  color: blue;
+}
+
+footer .credit{
+  text-align: center;
+  margin: 1rem 0;
+  border-top: 1px solid blue;
+  padding-top: 1rem;
+  font-size: 19px;
+}
+
+
+ @media screen and (max-width:819px) {
+  html{
+
+    font-size: 50%;
+  }
+    
+  .head .nav {
+   display: none;
+  };
+
+  }
+
+  
+ 
+ @media screen and(max-width:420){
+ 
+html{
+  font-size: 40%;
+}
+
+  
+ }
+  

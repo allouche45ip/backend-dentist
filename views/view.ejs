@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+  <head>
+   <link rel="stylesheet" href="/ss.css">
+
+    
+  </head>
+  <body>
+        <nav>
+          <ol class="breadcrumb">
+            <li class=" h1"><a href="/">Home</a></li>
+            <li class="a1" aria-current="page">
+              <%= obb.firstname %> <%= obb.lastname %>
+            </li>
+          </ol>
+              <pre>
+                                                                                  <div class="im">
+                                                                                    <img src="" alt="">
+                                                                                  </div>
+ 
+          <p class=" p1">
+            <span class="fw-medium fs-6">Id :</span> <%= obb.id %>
+          </p>
+        </nav>
+          </pre>
+        <table>
+          <thead>
+            <tr >
+              <th scope="col">Nom</th>
+              <td class="fw-normal" scope="col"><%= obb.firstname %></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Prenom</th>
+              <td><%= obb.lastname %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Age</th>
+              <td><%=obb.agee %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Email</th>
+              <td><%= obb.email %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">telephone</th>
+              <td><%= obb.phone %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Message</th>
+              <td><%= obb.messagen %></td>
+            </tr>
+
+            <tr>
+              <th scope="row">Time</th>
+              <td><%=moment(obb.updatedAt).fromNow();%></td>
+            </tr>
+
+           
+
+            
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
